@@ -1,4 +1,4 @@
-import Recipe from "../models/recipeModel.js"; // ✅ one level up to models
+import Recipe from "../models/recipeModel.js"; 
 
 export const createRecipe = async (req, res) => {
   try {
@@ -48,3 +48,4 @@ export const deleteRecipe = async (req, res) => {
     res.status(400).json({ error: err.message });
   }
 };
+
