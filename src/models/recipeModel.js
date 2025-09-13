@@ -6,7 +6,7 @@ const recipeSchema = new mongoose.Schema({
   instructions: { type: String, required: true }
 }, { timestamps: true });
 
-// ✅ Export default (so `import Recipe from ...` works)
 const Recipe = mongoose.model("Recipe", recipeSchema);
 
 export default Recipe;
+
