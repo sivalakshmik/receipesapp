@@ -5,7 +5,7 @@ import {
   getRecipeById,
   updateRecipe,
   deleteRecipe
-} from "../controllers/recipeController.js"; // ✅ fixed (no extra src)
+} from "../controllers/recipeController.js"; //
 
 const router = express.Router();
 
@@ -16,3 +16,4 @@ router.put("/:id", updateRecipe);
 router.delete("/:id", deleteRecipe);
 
 export default router;
+
