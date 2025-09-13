@@ -11,8 +11,8 @@ app.use(bodyParser.json());
 // Routes
 app.use("/api/recipes", recipeRoutes);
 
-// MongoDB connection (replace with your Atlas URI for Render deploy)
-const uri = "mongodb+srv://soniakv2822_db_user:killbill2811@cluster0.vttyujz.mongodb.net/recipesDB";
+// MongoDB connection
+const mongoUri = process.env.MONGO_URI;
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
@@ -24,4 +24,5 @@ mongoose.connect(uri, {
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(` Server running on port ${PORT}`));
+
 
